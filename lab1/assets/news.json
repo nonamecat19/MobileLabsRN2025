@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "Tech Giant Unveils New AI Model",
+    "description": "A leading technology company has announced its latest AI model, promising enhanced performance and capabilities.",
+    "date": "2025-03-09"
+  },
+  {
+    "id": 2,
+    "title": "Stock Markets Surge After Positive Economic Data",
+    "description": "Global stock markets saw a significant rise today following optimistic economic reports.",
+    "date": "2025-03-09"
+  },
+  {
+    "id": 3,
+    "title": "Breakthrough in Quantum Computing",
+    "description": "Researchers claim a major advancement in quantum computing that could revolutionize the industry.",
+    "date": "2025-03-08"
+  },
+  {
+    "id": 4,
+    "title": "Major Cyberattack Disrupts Government Services",
+    "description": "A large-scale cyberattack has affected multiple government agencies, causing disruptions in operations.",
+    "date": "2025-03-08"
+  },
+  {
+    "id": 5,
+    "title": "Famous Actor Announces Retirement",
+    "description": "A renowned Hollywood star has officially announced their retirement from acting after decades in the industry.",
+    "date": "2025-03-07"
+  },
+  {
+    "id": 6,
+    "title": "Scientists Discover New Exoplanet",
+    "description": "Astronomers have identified a new Earth-like exoplanet in the habitable zone of its star.",
+    "date": "2025-03-07"
+  },
+  {
+    "id": 7,
+    "title": "Global Leaders Meet for Climate Summit",
+    "description": "World leaders are gathering to discuss urgent measures for combating climate change.",
+    "date": "2025-03-06"
+  },
+  {
+    "id": 8,
+    "title": "New Electric Car Model Breaks Range Record",
+    "description": "A new electric vehicle has set a record for the longest range on a single charge.",
+    "date": "2025-03-06"
+  },
+  {
+    "id": 9,
+    "title": "Popular App Faces Privacy Concerns",
+    "description": "A widely used mobile app is under scrutiny for potential privacy violations.",
+    "date": "2025-03-05"
+  },
+  {
+    "id": 10,
+    "title": "Historic Space Mission Launched",
+    "description": "A groundbreaking space mission has been successfully launched, aiming to explore a distant asteroid.",
+    "date": "2025-03-05"
+  },
+  {
+    "id": 11,
+    "title": "Medical Breakthrough in Cancer Treatment",
+    "description": "Scientists have developed a promising new therapy for treating certain types of cancer.",
+    "date": "2025-03-04"
+  },
+  {
+    "id": 12,
+    "title": "Sports Championship Ends in Dramatic Finish",
+    "description": "The latest sports championship concluded with a thrilling last-minute victory.",
+    "date": "2025-03-04"
+  },
+  {
+    "id": 13,
+    "title": "Tech Company Introduces Foldable Laptop",
+    "description": "A major tech company has unveiled a foldable laptop, blending portability with innovation.",
+    "date": "2025-03-03"
+  },
+  {
+    "id": 14,
+    "title": "Archaeologists Unearth Ancient City",
+    "description": "A newly discovered ancient city is shedding light on lost civilizations.",
+    "date": "2025-03-03"
+  },
+  {
+    "id": 15,
+    "title": "Streaming Service Announces Price Hike",
+    "description": "A popular streaming platform has announced an increase in subscription prices.",
+    "date": "2025-03-02"
+  }
+]

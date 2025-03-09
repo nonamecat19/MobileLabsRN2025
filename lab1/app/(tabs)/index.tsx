@@ -1,26 +1,29 @@
-import {ScrollView, StyleSheet} from 'react-native';
+import {FlatList, StyleSheet} from 'react-native';
+import news from "@/assets/news.json"
+import NewsItem from "@/components/NewsItem";
 
 export default function HomeScreen() {
     return (
-        <ScrollView></ScrollView>
+        <FlatList
+            data={news}
+            keyExtractor={(_, index) => index.toString()}
+            numColumns={1}
+            renderItem={({item}) => (
+                <NewsItem
+                    key={item.id}
+                    title={item.title}
+                    description={item.description}
+                    date={item.date}
+                />
+            )}
+            contentContainerStyle={styles.container}
+        />
     );
 }
 
 const styles = StyleSheet.create({
-    titleContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
+    container: {
         gap: 8,
-    },
-    stepContainer: {
-        gap: 8,
-        marginBottom: 8,
-    },
-    reactLogo: {
-        height: 178,
-        width: 290,
-        bottom: 0,
-        left: 0,
-        position: 'absolute',
-    },
+        padding: 8
+    }
 });
