@@ -1,0 +1,1 @@
+export const safetyCodeMock = "N5KCV"
