@@ -1,4 +1,4 @@
-import {AppTheme} from "@/types/themes";
+import {AppTheme} from "@/types";
 
 export const DarkTheme = {
     background: "#1C202C",
