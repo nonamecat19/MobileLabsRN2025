@@ -4,6 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import {StatusBar} from 'expo-status-bar';
 import {useEffect} from 'react';
 import 'react-native-reanimated';
+import {ThemeProvider} from "@/providers";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 void SplashScreen.preventAutoHideAsync();
@@ -24,11 +25,11 @@ export default function RootLayout() {
     }
 
     return (
-        <>
+        <ThemeProvider>
             <Stack>
                 <Stack.Screen name="(tabs)" options={{headerShown: false}}/>
             </Stack>
             <StatusBar style="auto"/>
-        </>
+        </ThemeProvider>
     );
 }
