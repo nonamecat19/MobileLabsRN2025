@@ -64,7 +64,7 @@ export default function TabLayout() {
                     title: '',
                     tabBarIcon: () =>
                         <Image
-                            source={require('../../assets/images/rust-icon.png')}
+                            source={require('../../assets/images/user-icon/rust.png')}
                             style={{width: 24, height: 24, borderRadius: 20}}
                         />
                 }}
