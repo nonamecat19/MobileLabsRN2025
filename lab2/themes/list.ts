@@ -1,4 +1,5 @@
-import {DarkTheme, LightTheme} from "@/themes";
+import {LightTheme} from "./light";
+import {DarkTheme} from "./dark";
 import {AppTheme, AppThemeName} from "@/types";
 
 export const appThemes = {

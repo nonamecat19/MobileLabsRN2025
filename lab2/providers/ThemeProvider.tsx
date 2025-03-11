@@ -40,7 +40,7 @@ export function ThemeProvider({children}: ThemeProviderProps) {
         await AsyncStorage.setItem(THEME_STORAGE_KEY, newTheme);
     }
 
-    const theme = appThemes[themeName];
+    const theme: AppTheme = appThemes[themeName];
 
     return (
         <ThemeContext.Provider
