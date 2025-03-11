@@ -1,10 +1,10 @@
-import {StyleSheet, View} from 'react-native';
+import {Text} from 'react-native';
+import {ScreenLayout} from "@/components";
 
 export default function HomeScreen() {
     return (
-        <View>
-        </View>
+        <ScreenLayout>
+            <Text>asdfasdf</Text>
+        </ScreenLayout>
     );
 }
-
-const styles = StyleSheet.create({});
