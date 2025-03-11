@@ -1,10 +1,10 @@
 import {Text} from 'react-native';
 import {ScreenLayout} from "@/components";
 
-export default function HomeScreen() {
+export default function ChatScreen() {
     return (
         <ScreenLayout>
-            <Text>Store</Text>
+            <Text>Chat</Text>
         </ScreenLayout>
     );
 }
