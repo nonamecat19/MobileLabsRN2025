@@ -1,3 +1,5 @@
+import {ThemeName} from "@/constants";
+
 type Hex = `#${string}`
 
 export type AppTheme = {
@@ -12,3 +14,6 @@ export type AppTheme = {
     info: Hex
     special: Hex
 }
+
+export type AppThemeName = ThemeName.Dark | ThemeName.Light
+
