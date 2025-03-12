@@ -1,5 +1,5 @@
-import {Text} from 'react-native';
-import {Heading, HeadingSearchIcon, ScreenLayout} from "@/components";
+import {Heading, HeadingSearchIcon, ScreenLayout, StoreGallery} from "@/components";
+import {storeGalleryMock} from "@/mocks";
 
 export default function HomeScreen() {
     return (
@@ -8,7 +8,7 @@ export default function HomeScreen() {
                 title="Store"
                 icon={<HeadingSearchIcon/>}
             />
-            <Text>Store</Text>
+            <StoreGallery data={storeGalleryMock}/>
         </ScreenLayout>
     );
 }
