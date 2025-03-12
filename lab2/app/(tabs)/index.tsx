@@ -1,5 +1,6 @@
 import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText} from "@/components";
-import {storeGalleryMock} from "@/mocks";
+import {storeGalleryMock, storeRecommendationsMock} from "@/mocks";
+import {GameList} from "@/components/GameList";
 
 export default function HomeScreen() {
     return (
@@ -25,7 +26,9 @@ export default function HomeScreen() {
                     </TabsItemText>
                 </Tabs>
             </ContentLayout>
-
+            <ContentLayout>
+                <GameList data={storeRecommendationsMock}/>
+            </ContentLayout>
         </ScreenLayout>
     );
 }
