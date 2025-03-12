@@ -2,6 +2,7 @@ import {PlatformType} from "@/constants";
 import {AntDesign, FontAwesome6} from "@expo/vector-icons";
 import styled from "styled-components/native";
 import {Text} from "react-native";
+import {Fragment} from "react";
 
 interface PlatformsListProps {
     platforms: PlatformType[];
@@ -26,7 +27,14 @@ export function PlatformsList({platforms, withText, size = 20, color = "#000000"
     return (
         <Container>
             <Container>
-                {platforms.map(platform => platformsMap[platform])}
+                {
+                    platforms.map(
+                        platform =>
+                            <Fragment key={platform}>
+                                {platformsMap[platform]}
+                            </Fragment>
+                    )
+                }
             </Container>
             {withText &&
                 <PlatformsText
