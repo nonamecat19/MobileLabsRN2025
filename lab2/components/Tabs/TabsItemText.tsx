@@ -21,4 +21,5 @@ export function TabsItemText({children, active}: TabsItemTextProps) {
 
 const TabText = styled(Text)`
     color: ${({theme}: StyledThemeProps) => theme.textPrimary};
+    padding-horizontal: 10px;
 `

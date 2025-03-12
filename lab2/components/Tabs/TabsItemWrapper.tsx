@@ -21,7 +21,7 @@ export function TabsItemWrapper({children, active}: TabsItemWrapperProps) {
 type TabProps = Pick<TabsItemWrapperProps, "active">
 
 const Tab = styled.View`
-    padding: 10px 20px;
+    padding: 10px;
     border-radius: 10px;
     background: ${({theme, active}: StyledThemeProps & TabProps) => {
         return active
