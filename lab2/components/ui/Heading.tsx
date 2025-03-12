@@ -5,7 +5,7 @@ import {useTheme} from "@/hooks";
 import {ReactNode} from "react";
 import {Image} from "expo-image";
 import {StyledThemeProps} from "@/types";
-import {ContentLayout} from "@/components";
+import {ContentLayout} from "./ContentLayout";
 
 interface HeadingProps {
     title: string;

@@ -1,7 +1,9 @@
 import {GalleryItem, StyledThemeProps} from "@/types";
 import {Image} from "expo-image";
 import styled from "styled-components/native";
-import {PlatformsList, StoreGalleryPrice, StoreGalleryPriceDiscount} from "@/components";
+import {PlatformsList} from "../ui/PlatformsList";
+import {StoreGalleryPrice} from "./StoreGalleryPrice";
+import {StoreGalleryPriceDiscount} from "./StoreGalleryPriceDiscount";
 import {useTheme} from "@/hooks";
 import {HexOpacity} from "@/constants";
 

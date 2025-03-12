@@ -55,7 +55,7 @@ export function PlatformsList({platforms, withText, size = 20, color = "#000000"
 const Container = styled.View`
     flex-direction: row;
     align-items: center;
-    gap: 10
+    gap: 10px
 `
 
 type PlatformsTextProps = Pick<PlatformsListProps, "size" | "color">

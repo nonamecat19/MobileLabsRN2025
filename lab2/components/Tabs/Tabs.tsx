@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import {ContentLayout} from "@/components";
+import {ContentLayout} from "../ui/ContentLayout";
 import {ReactNode} from "react";
 
 interface TabsProps {
