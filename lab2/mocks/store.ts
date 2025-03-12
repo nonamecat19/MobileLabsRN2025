@@ -1,4 +1,4 @@
-import {GalleryItem} from "@/types";
+import {GalleryItem, StoreRecommendationItem} from "@/types";
 import {PlatformType} from "@/constants";
 
 export const storeGalleryMock: GalleryItem[] = [
@@ -18,4 +18,32 @@ export const storeGalleryMock: GalleryItem[] = [
         image: require('../assets/images/banners/battlefield-hardline.png'),
         platforms: [PlatformType.WINDOWS, PlatformType.MACOS]
     }
+]
+
+export const storeRecommendationsMock: StoreRecommendationItem[] = [
+    {
+        title: "Grand Theft Auto V",
+        image: require('../assets/images/banners/gta.png'),
+        price: 20,
+        discount: 50,
+        platforms: [PlatformType.WINDOWS]
+    },
+    {
+        title: "Battlefield 4",
+        image: require('../assets/images/banners/battlefield-4.png'),
+        price: 35,
+        platforms: [PlatformType.WINDOWS]
+    },
+    {
+        title: "Factorio",
+        image: require('../assets/images/banners/factorio.png'),
+        price: 7,
+        platforms: [PlatformType.WINDOWS, PlatformType.MACOS]
+    },
+    {
+        title: "Horizon Zero Dawn",
+        image: require('../assets/images/banners/horizon.png'),
+        price: 38,
+        platforms: [PlatformType.WINDOWS]
+    },
 ]

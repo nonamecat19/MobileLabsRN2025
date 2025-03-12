@@ -5,11 +5,11 @@ interface BaseGameItem {
     image: unknown
     price: number
     discount?: number
+    platforms: PlatformType[]
 }
 
 export interface GalleryItem extends BaseGameItem {
     description: string
-    platforms: PlatformType[]
 }
 
 export interface StoreRecommendationItem extends BaseGameItem {
