@@ -1,11 +1,15 @@
-import {GalleryItem, StyledThemeProps} from "@/types";
+import {StyledThemeProps} from "@/types";
 import styled from "styled-components/native";
 import {HexOpacity} from "@/constants";
+import {calculatePriceWithDiscount} from "@/utils";
 
-type StoreGalleryPriceDiscountProps = Pick<GalleryItem, "price" | "discount">
+interface StoreGalleryPriceDiscountProps {
+    price: number;
+    discount: number;
+}
 
 export function StoreGalleryPriceDiscount({price, discount}: StoreGalleryPriceDiscountProps) {
-    const priceWithDiscount = Math.floor(discount ? (price * (100 - discount)) / 100 : price);
+    const priceWithDiscount = calculatePriceWithDiscount(price, discount);
 
     return (
         <Container>
