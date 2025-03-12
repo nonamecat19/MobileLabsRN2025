@@ -1,4 +1,4 @@
-import {UserStatus} from "@/constants";
+import {PlatformType, UserStatus} from "@/constants";
 
 interface BaseGameItem {
     title: string
@@ -9,6 +9,7 @@ interface BaseGameItem {
 
 export interface GalleryItem extends BaseGameItem {
     description: string
+    platforms: PlatformType[]
 }
 
 export interface StoreRecommendationItem extends BaseGameItem {
