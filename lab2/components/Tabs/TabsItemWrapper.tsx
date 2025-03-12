@@ -8,10 +8,10 @@ interface TabsItemWrapperProps {
     active?: boolean;
 }
 
-export function TabsItemWrapper({children}: TabsItemWrapperProps) {
+export function TabsItemWrapper({children, active}: TabsItemWrapperProps) {
     return (
         <Pressable>
-            <Tab>
+            <Tab active={active}>
                 {children}
             </Tab>
         </Pressable>
