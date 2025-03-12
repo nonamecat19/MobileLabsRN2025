@@ -1,4 +1,4 @@
-import {Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText} from "@/components";
+import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText} from "@/components";
 import {storeGalleryMock} from "@/mocks";
 
 export default function HomeScreen() {
@@ -9,20 +9,23 @@ export default function HomeScreen() {
                 icon={<HeadingSearchIcon/>}
             />
             <StoreGallery data={storeGalleryMock}/>
-            <Tabs>
-                <TabsItemText active>
-                    Top Sellers
-                </TabsItemText>
-                <TabsItemText>
-                    Free to play
-                </TabsItemText>
-                <TabsItemText>
-                    Early access
-                </TabsItemText>
-                <TabsItemText>
-                    Action
-                </TabsItemText>
-            </Tabs>
+            <ContentLayout>
+                <Tabs>
+                    <TabsItemText active>
+                        Top Sellers
+                    </TabsItemText>
+                    <TabsItemText>
+                        Free to play
+                    </TabsItemText>
+                    <TabsItemText>
+                        Early access
+                    </TabsItemText>
+                    <TabsItemText>
+                        Action
+                    </TabsItemText>
+                </Tabs>
+            </ContentLayout>
+
         </ScreenLayout>
     );
 }

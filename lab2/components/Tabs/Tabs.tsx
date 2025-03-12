@@ -1,5 +1,4 @@
 import styled from "styled-components/native";
-import {ContentLayout} from "../ui/ContentLayout";
 import {ReactNode} from "react";
 
 interface TabsProps {
@@ -8,11 +7,9 @@ interface TabsProps {
 
 export function Tabs({children}: TabsProps) {
     return (
-        <ContentLayout>
-            <Container>
-                {children}
-            </Container>
-        </ContentLayout>
+        <Container>
+            {children}
+        </Container>
     )
 }
 
