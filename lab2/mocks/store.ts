@@ -46,4 +46,23 @@ export const storeRecommendationsMock: StoreRecommendationItem[] = [
         price: 38,
         platforms: [PlatformType.WINDOWS]
     },
+    {
+        title: "Kingdom Come",
+        image: require('../assets/images/banners/kingdom-come.jpeg'),
+        price: 52,
+        discount: 25,
+        platforms: [PlatformType.WINDOWS, PlatformType.LINUX]
+    },
+    {
+        title: "Dead by Daylight",
+        image: require('../assets/images/banners/dbd.png'),
+        price: 20,
+        platforms: [PlatformType.WINDOWS, PlatformType.LINUX]
+    },
+    {
+        title: "Coral",
+        image: require('../assets/images/banners/coral.png'),
+        price: 15,
+        platforms: [PlatformType.WINDOWS]
+    },
 ]
