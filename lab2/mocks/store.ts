@@ -19,10 +19,3 @@ export const storeGalleryMock: GalleryItem[] = [
         platforms: [PlatformType.WINDOWS, PlatformType.MACOS]
     }
 ]
-
-export const storeCategoriesMock: string[] = [
-    "Top Sellers",
-    "Free to play",
-    "Early Access",
-    "Action"
-]
