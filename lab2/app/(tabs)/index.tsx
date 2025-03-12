@@ -1,6 +1,5 @@
-import {Heading, HeadingSearchIcon, ScreenLayout, StoreGallery} from "@/components";
+import {Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText} from "@/components";
 import {storeGalleryMock} from "@/mocks";
-import {Tabs, TabsItemText} from "@/components/Tabs";
 
 export default function HomeScreen() {
     return (
