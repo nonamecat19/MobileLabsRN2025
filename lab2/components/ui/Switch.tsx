@@ -4,21 +4,27 @@ import {useState} from "react";
 import {TouchableOpacity} from "react-native";
 
 interface SwitchProps {
-    options: [string, string]
+    options: [string, string],
+    onChange?: (value: boolean) => void,
 }
 
-export function Switch({options}: SwitchProps) {
+export function Switch({options, onChange}: SwitchProps) {
     const [first, second] = options
     const [isFirstSelected, setIsFirstSelected] = useState<boolean>(true)
 
+    function handleToggle(value: boolean) {
+        setIsFirstSelected(value)
+        onChange?.(value)
+    }
+
     return (
         <Container>
-            <Item selected={isFirstSelected} onPress={() => setIsFirstSelected(true)}>
+            <Item selected={isFirstSelected} onPress={() => handleToggle(true)}>
                 <ItemText selected={isFirstSelected}>
                     {first}
                 </ItemText>
             </Item>
-            <Item selected={!isFirstSelected} onPress={() => setIsFirstSelected(false)}>
+            <Item selected={!isFirstSelected} onPress={() => handleToggle(false)}>
                 <ItemText selected={!isFirstSelected}>
                     {second}
                 </ItemText>

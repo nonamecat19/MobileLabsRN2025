@@ -1,15 +1,15 @@
 import {AppTheme} from "@/types";
 
 export const LightTheme = {
-    background: "#aec5e2",
+    background: "#dde9f2",
     backgroundAccent: "#8fa8f8",
-    backgroundForeground: "#618af1",
+    backgroundForeground: "#83a5f1",
     backgroundForegroundLight: "#82a1f8",
-    textPrimary: "#FFFFFF",
+    textPrimary: "#000000",
     textSecondary: "#7B8D9D",
-    uiPrimary: "#FFFFFF",
-    uiSecondary: "#4B5664",
+    uiPrimary: "#000000",
+    uiSecondary: "#292929",
     success: "#1eb45a",
     info: "#27a0df",
-    special: "#882388"
+    special: "#f484f4"
 } satisfies AppTheme

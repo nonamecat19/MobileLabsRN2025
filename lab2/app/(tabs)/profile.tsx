@@ -1,10 +1,13 @@
-import {Text} from 'react-native';
+import {Button, Text} from 'react-native';
 import {Image} from 'expo-image';
-import {ContentLayout, MenuContainer, MenuItem, PrimaryText, ScreenLayout} from "@/components";
+import {ContentLayout, MenuContainer, MenuItem, PrimaryText, ScreenLayout, Switch} from "@/components";
 import styled from "styled-components/native";
 import {StyledThemeProps} from "@/types";
+import {useTheme} from "@/hooks";
 
 export default function ProfileScreen() {
+    const {toggle, theme} = useTheme()
+
     return (
         <ScreenLayout>
 
@@ -21,7 +24,11 @@ export default function ProfileScreen() {
                 <MenuContainer>
                     <MenuItem text="Settings"/>
                     <MenuItem text="Logout"/>
+                    <MenuItem text="Switch theme"/>
                 </MenuContainer>
+                <ThemeSwitchContainer>
+                    <Button title="Change theme" onPress={() => toggle()}/>
+                </ThemeSwitchContainer>
             </ContentLayout>
         </ScreenLayout>
     );
@@ -44,4 +51,8 @@ const InfoText = styled.Text`
 const Avatar = styled(Image)`
     width: 120px;
     height: 120px;
+`
+
+const ThemeSwitchContainer = styled.View`
+    padding-top: 20px;
 `
