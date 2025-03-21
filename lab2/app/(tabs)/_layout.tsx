@@ -48,14 +48,14 @@ export default function TabLayout() {
                 name="chat"
                 options={{
                     title: '',
-                    tabBarIcon: ({color}) => <Feather name="shield" size={ICON_SIZE} color={color}/>,
+                    tabBarIcon: ({color}) => <Feather name="message-circle" size={ICON_SIZE} color={color}/>,
                 }}
             />
             <Tabs.Screen
                 name="safety"
                 options={{
                     title: '',
-                    tabBarIcon: ({color}) => <Feather name="message-circle" size={ICON_SIZE} color={color}/>,
+                    tabBarIcon: ({color}) => <Feather name="shield" size={ICON_SIZE} color={color}/>,
                 }}
             />
             <Tabs.Screen
