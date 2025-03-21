@@ -1,6 +1,3 @@
-import {Text} from 'react-native';
-import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout} from "@/components";
-import {Switch} from "@/components/ui/Switch";
 import {Chat, ContentLayout, Heading, HeadingSearchIcon, ScreenLayout, Switch} from "@/components";
 import {chatOpenChatsMock} from "@/mocks";
 
