@@ -3,27 +3,29 @@ import {
     Heading,
     HeadingSearchIcon,
     ScreenLayout,
+    DescriptionText,
     Tabs,
     TabsItemText,
-    TabsItemWrapper,
-    SecondaryText
+    TabsItemWrapper
 } from "@/components";
 import {AntDesign} from "@expo/vector-icons";
 import {useTheme} from "@/hooks";
+import {News} from "@/components/News";
+import {communityNewsMock} from "@/mocks";
 
 export default function CommunityScreen() {
     const {theme} = useTheme()
 
     return (
-        <ScreenLayout>
+        <ScreenLayout nestedScrollEnabled={true}>
             <Heading
                 title="Community"
                 icon={<HeadingSearchIcon/>}
             />
             <ContentLayout>
-                <SecondaryText>
+                <DescriptionText>
                     Community and official content for all games and software
-                </SecondaryText>
+                </DescriptionText>
 
                 <Tabs>
                     <TabsItemWrapper>
@@ -43,6 +45,7 @@ export default function CommunityScreen() {
                     </TabsItemText>
                 </Tabs>
             </ContentLayout>
+            <News data={communityNewsMock}/>
         </ScreenLayout>
     );
 }
