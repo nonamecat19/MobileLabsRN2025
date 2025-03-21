@@ -5,4 +5,5 @@ export * from "./News"
 export * from "./GameList"
 export * from "./Chat"
 export * from "./Menu"
+export * from "./Totp"
 
