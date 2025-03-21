@@ -23,3 +23,15 @@ export interface OpenChatItem {
     avatar: unknown,
     status: UserStatus
 }
+
+export interface CommunityNewsItem {
+    title: string
+    description: string
+    likes: number
+    comments: number
+    nickname: string
+    date: Date
+    tags: string[]
+    photo: unknown
+    userPhoto: unknown
+}
