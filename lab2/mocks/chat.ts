@@ -23,7 +23,7 @@ export const chatOpenChatsMock: OpenChatItem[] = [
         message: "Ok",
         date: new Date(),
         lastMessageMine: true,
-        avatar: require('../assets/images/user-icon/rust.png'),
+        avatar: require('../assets/images/user-icon/rust-chat.png'),
         status: UserStatus.AWAY
     },
     {
@@ -31,7 +31,7 @@ export const chatOpenChatsMock: OpenChatItem[] = [
         message: "Ok",
         date: new Date(),
         lastMessageMine: true,
-        avatar: require('../assets/images/user-icon/rust.png'),
+        avatar: require('../assets/images/user-icon/rust-chat.png'),
         status: UserStatus.AWAY
     },
     {
@@ -65,5 +65,37 @@ export const chatOpenChatsMock: OpenChatItem[] = [
         lastMessageMine: false,
         avatar: require('../assets/images/user-icon/skeleton.png'),
         status: UserStatus.ONLINE
+    },
+    {
+        nickname: "Mark Dyson",
+        message: "I'm already starting to play",
+        date: new Date(),
+        lastMessageMine: false,
+        avatar: require('../assets/images/user-icon/smile.png'),
+        status: UserStatus.ONLINE
+    },
+    {
+        nickname: "Mark Dyson",
+        message: "Ok",
+        date: new Date(),
+        lastMessageMine: true,
+        avatar: require('../assets/images/user-icon/smile.png'),
+        status: UserStatus.ONLINE
+    },
+    {
+        nickname: "Player123",
+        message: "Ok",
+        date: new Date(),
+        lastMessageMine: true,
+        avatar: require('../assets/images/user-icon/rust-chat.png'),
+        status: UserStatus.AWAY
+    },
+    {
+        nickname: "Player123",
+        message: "Ok",
+        date: new Date(),
+        lastMessageMine: true,
+        avatar: require('../assets/images/user-icon/rust-chat.png'),
+        status: UserStatus.AWAY
     },
 ]
