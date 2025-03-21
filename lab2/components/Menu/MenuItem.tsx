@@ -22,8 +22,10 @@ export function MenuItem({text}: MenuItemProps) {
     )
 }
 
-const Title = styled(PrimaryText)`
-
+const Title = styled.Text`
+    color: ${({ theme }: StyledThemeProps) => theme.textPrimary};
+    font-weight: 400;
+    font-size: 18px;
 `
 
 const Container = styled.View`

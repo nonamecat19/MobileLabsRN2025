@@ -1,6 +1,6 @@
 import {Text} from 'react-native';
 import {Image} from 'expo-image';
-import {MenuContainer, MenuItem, PrimaryText, ScreenLayout} from "@/components";
+import {ContentLayout, MenuContainer, MenuItem, PrimaryText, ScreenLayout} from "@/components";
 import styled from "styled-components/native";
 import {StyledThemeProps} from "@/types";
 
@@ -17,10 +17,12 @@ export default function ProfileScreen() {
                     Group
                 </InfoText>
             </InfoContainer>
-            <MenuContainer>
-                <MenuItem text="Settings"/>
-                <MenuItem text="Logout"/>
-            </MenuContainer>
+            <ContentLayout>
+                <MenuContainer>
+                    <MenuItem text="Settings"/>
+                    <MenuItem text="Logout"/>
+                </MenuContainer>
+            </ContentLayout>
         </ScreenLayout>
     );
 }
