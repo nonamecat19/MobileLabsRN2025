@@ -7,6 +7,7 @@ export type AppTheme = {
     background: Hex
     backgroundAccent: Hex
     backgroundForeground: Hex
+    backgroundForegroundLight: Hex
     textPrimary: Hex
     textSecondary: Hex
     uiPrimary: Hex

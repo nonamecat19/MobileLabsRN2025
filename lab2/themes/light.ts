@@ -4,6 +4,7 @@ export const LightTheme = {
     background: "#aec5e2",
     backgroundAccent: "#8fa8f8",
     backgroundForeground: "#618af1",
+    backgroundForegroundLight: "#82a1f8",
     textPrimary: "#FFFFFF",
     textSecondary: "#7B8D9D",
     uiPrimary: "#FFFFFF",
