@@ -1,10 +1,17 @@
 import {Text} from 'react-native';
-import {ScreenLayout} from "@/components";
+import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout} from "@/components";
+import {Switch} from "@/components/ui/Switch";
 
 export default function ChatScreen() {
     return (
-        <ScreenLayout>
-            <Text>Chat</Text>
+        <ScreenLayout nestedScrollEnabled={true}>
+            <Heading
+                title="Chat"
+                icon={<HeadingSearchIcon/>}
+            />
+            <ContentLayout>
+                <Switch options={["Open chats", "My friends"]}/>
+            </ContentLayout>
         </ScreenLayout>
     );
 }
