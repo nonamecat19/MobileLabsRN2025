@@ -1,6 +1,5 @@
-import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText} from "@/components";
+import {ContentLayout, Heading, HeadingSearchIcon, ScreenLayout, StoreGallery, Tabs, TabsItemText, GameList} from "@/components";
 import {storeGalleryMock, storeRecommendationsMock} from "@/mocks";
-import {GameList} from "@/components/GameList";
 
 export default function HomeScreen() {
     return (

@@ -6,11 +6,11 @@ import {
     DescriptionText,
     Tabs,
     TabsItemText,
-    TabsItemWrapper
+    TabsItemWrapper,
+    News
 } from "@/components";
 import {AntDesign} from "@expo/vector-icons";
 import {useTheme} from "@/hooks";
-import {News} from "@/components/News";
 import {communityNewsMock} from "@/mocks";
 
 export default function CommunityScreen() {
