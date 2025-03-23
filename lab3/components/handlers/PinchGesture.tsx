@@ -4,7 +4,7 @@ import {useAddPoints, useScale} from "@/store";
 import { Animated } from "react-native";
 
 interface PinchGestureProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 export const PinchGesture = forwardRef(

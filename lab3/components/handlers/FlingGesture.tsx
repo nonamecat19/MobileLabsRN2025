@@ -3,7 +3,7 @@ import { Directions, FlingGestureHandler } from "react-native-gesture-handler";
 import { useAddPoints } from "@/store";
 
 interface FlingGestureProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 export const FlingGesture = forwardRef(

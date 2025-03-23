@@ -3,7 +3,7 @@ import { LongPressGestureHandler } from "react-native-gesture-handler";
 import { useAddPoints } from "@/store";
 
 interface LongPressGestureProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 export const LongPressGesture = forwardRef(

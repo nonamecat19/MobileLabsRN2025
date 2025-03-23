@@ -3,7 +3,7 @@ import { PanGestureHandler } from "react-native-gesture-handler";
 import { usePosition } from "@/store";
 
 interface PanGestureProps {
-    children: ReactNode;
+    children?: ReactNode;
 }
 
 export const PanGesture = forwardRef(
