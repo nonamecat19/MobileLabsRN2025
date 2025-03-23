@@ -1,4 +1,4 @@
-import {atom, useAtom} from "jotai"
+import {atom, useAtom, useAtomValue} from "jotai"
 
 type Stats = {
     singleTaps: number
@@ -24,6 +24,10 @@ const statsAtom = atom<Stats>(defaultStat)
 
 export function useStats() {
     return useAtom(statsAtom)
+}
+
+export function useGetStats() {
+    return useAtomValue(statsAtom)
 }
 
 export function useAddStat(name: keyof Stats) {

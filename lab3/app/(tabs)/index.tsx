@@ -31,6 +31,6 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
     score: {
         fontSize: 24,
-        marginBottom: 32,
+        marginBottom: 128,
     },
 });
