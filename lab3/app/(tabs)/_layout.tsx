@@ -2,15 +2,13 @@ import { Tabs } from 'expo-router';
 import React from 'react';
 import { Platform } from 'react-native';
 
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import TabBarBackground from '@/components/ui/TabBarBackground';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
             position: 'absolute',
@@ -22,9 +20,16 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <MaterialIcons size={28} name="house" color={color} />,
         }}
       />
+        <Tabs.Screen
+            name="tasks"
+            options={{
+                title: 'Tasks',
+                tabBarIcon: ({ color }) => <MaterialIcons size={28} name="task" color={color} />,
+            }}
+        />
     </Tabs>
   );
 }
