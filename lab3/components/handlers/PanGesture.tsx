@@ -1,6 +1,6 @@
 import React, { ReactNode, forwardRef } from "react";
 import { PanGestureHandler } from "react-native-gesture-handler";
-import { usePosition } from "@/store";
+import {useAddStat, usePosition} from "@/store";
 
 interface PanGestureProps {
     children?: ReactNode;
@@ -9,6 +9,7 @@ interface PanGestureProps {
 export const PanGesture = forwardRef(
     ({ children }: PanGestureProps, ref) => {
         const [, setPosition] = usePosition();
+        const addMoveStat = useAddStat("moveCount")
 
         return (
             <PanGestureHandler
@@ -18,6 +19,7 @@ export const PanGesture = forwardRef(
                         x: event.nativeEvent.translationX,
                         y: event.nativeEvent.translationY,
                     });
+                    addMoveStat()
                 }}
                 onEnded={() => setPosition({ x: 0, y: 0 })}
             >

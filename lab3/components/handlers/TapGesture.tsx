@@ -1,6 +1,6 @@
 import React, {forwardRef, ReactNode} from "react";
 import {TapGestureHandler} from "react-native-gesture-handler";
-import {useAddPoints} from "@/store";
+import {useAddPoints, useAddStat} from "@/store";
 
 interface SingleTapGestureProps {
     children?: ReactNode
@@ -8,15 +8,27 @@ interface SingleTapGestureProps {
 
 export const TapGesture = forwardRef(({children}: SingleTapGestureProps, ref) => {
     const addPoints = useAddPoints();
+    const addSingleTapStat = useAddStat("singleTaps")
+    const addDoubleTapStat = useAddStat("doubleTaps")
+
+    function handleSingleTap() {
+        addPoints(1)
+        addSingleTapStat()
+    }
+
+    function handleMultipleTap() {
+        addPoints(2)
+        addDoubleTapStat()
+    }
 
     return (
         <TapGestureHandler
             ref={ref}
-            onActivated={() => addPoints(1)}
+            onActivated={handleSingleTap}
             maxDelayMs={100}
         >
             <TapGestureHandler
-                onActivated={() => addPoints(2)}
+                onActivated={handleMultipleTap}
                 numberOfTaps={2}
             >
                 {children}
