@@ -13,8 +13,8 @@ export const LongPressGesture = forwardRef(
         return (
             <LongPressGestureHandler
                 ref={ref}
-                onActivated={() => addPoints(5)}
-                minDurationMs={700}
+                onActivated={() => addPoints(15)}
+                minDurationMs={3000}
             >
                 {children}
             </LongPressGestureHandler>
