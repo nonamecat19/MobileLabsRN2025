@@ -1,74 +1,105 @@
-import { Image, StyleSheet, Platform } from 'react-native';
-
-import { HelloWave } from '@/components/HelloWave';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+import {Button, FlatList, StyleSheet, Text, TextInput, View} from 'react-native';
+import {TaskItem} from "@/components/TaskItem";
+import {Header} from "@/components/Header";
+import {SelectDate} from "@/components/SelectDate";
+import {useTasks} from "@/hooks/useTodo";
+import {useState} from "react";
+import {Task} from "@/types";
 
 export default function HomeScreen() {
-  return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
-      headerImage={
-        <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
-        />
-      }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12'
-            })}
-          </ThemedText>{' '}
-          to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
-        <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
-    </ParallaxScrollView>
-  );
-}
+    const [tasks, setTasks] = useTasks()
+
+    const [name, setName] = useState<string>('')
+    const [description, setDescription] = useState<string>('')
+    const [date, setDate] = useState<Date | null>(null)
+
+    async function deleteTask(id: string) {
+        const updatedTasks = tasks.filter(task => task.id !== id);
+        await setTasks(updatedTasks);
+    }
+
+    async function handleAddTask() {
+        if (!name || !date) {
+            return;
+        }
+
+        const newTask: Task = {
+            id: Math.random().toString(),
+            title: name,
+            description,
+            reminderTime: date,
+        }
+        const updatedTasks = [...tasks, newTask]
+        await setTasks(updatedTasks)
+        setDate(null)
+        setName('')
+        setDescription('')
+    }
+
+    return (
+        <View style={styles.container}>
+            <Header/>
+
+            <TextInput
+                placeholder="Name"
+                style={styles.input}
+                value={name}
+                onChange={(e) => setName(e.nativeEvent.text)}
+            />
+            <TextInput
+                placeholder="Description"
+                style={styles.input}
+                value={description}
+                onChange={(e) => setDescription(e.nativeEvent.text)}
+            />
+
+            <SelectDate value={date} onChange={setDate}/>
+
+            <Button title="Add task" onPress={handleAddTask}/>
+
+            {tasks.length === 0 ? (
+                <View style={styles.emptyContainer}>
+                    <Text style={styles.emptyText}>No tasks yet. Add your first task!</Text>
+                </View>
+            ) : (
+                <FlatList
+                    data={tasks}
+                    contentContainerStyle={styles.tasksContainer}
+                    keyExtractor={(item) => item.id}
+                    renderItem={({item}) => (
+                        <TaskItem task={item} onDelete={deleteTask}/>
+                    )}
+                />
+            )}
+        </View>
+    );
+};
 
 const styles = StyleSheet.create({
-  titleContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  stepContainer: {
-    gap: 8,
-    marginBottom: 8,
-  },
-  reactLogo: {
-    height: 178,
-    width: 290,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-  },
+    container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#f5f5f5',
+    },
+    input: {
+        height: 40,
+        borderColor: '#d7d7d7',
+        borderWidth: 1,
+        borderRadius: 5,
+        backgroundColor: "white",
+        padding: 10,
+        marginBottom: 12,
+    },
+    emptyContainer: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    emptyText: {
+        fontSize: 16,
+        color: '#888',
+    },
+    tasksContainer: {
+        padding: 10
+    }
 });
