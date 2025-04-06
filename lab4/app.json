@@ -44,6 +44,9 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "oneSignalAppId": "1b8af4e1-6610-44df-a55a-6edb242205ac"
     }
   }
 }

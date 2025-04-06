@@ -5,6 +5,7 @@ import {SelectDate} from "@/components/SelectDate";
 import {useTasks} from "@/hooks/useTodo";
 import {useState} from "react";
 import {Task} from "@/types";
+import {cancelNotification, scheduleNotification} from "@/lib/notifications";
 
 export default function HomeScreen() {
     const [tasks, setTasks] = useTasks()
@@ -16,6 +17,7 @@ export default function HomeScreen() {
     async function deleteTask(id: string) {
         const updatedTasks = tasks.filter(task => task.id !== id);
         await setTasks(updatedTasks);
+        await cancelNotification(id)
     }
 
     async function handleAddTask() {
@@ -24,7 +26,7 @@ export default function HomeScreen() {
         }
 
         const newTask: Task = {
-            id: Math.random().toString(),
+            id: await scheduleNotification(name, description, date),
             title: name,
             description,
             reminderTime: date,

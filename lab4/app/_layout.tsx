@@ -4,6 +4,7 @@ import * as SplashScreen from 'expo-splash-screen';
 import {StatusBar} from 'expo-status-bar';
 import {useEffect} from 'react';
 import 'react-native-reanimated';
+import {initializeOneSignal} from "@/lib/notifications";
 
 void SplashScreen.preventAutoHideAsync();
 
@@ -11,6 +12,10 @@ export default function RootLayout() {
     const [loaded] = useFonts({
         SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     });
+
+    useEffect(() => {
+        return initializeOneSignal()
+    }, []);
 
     useEffect(() => {
         if (loaded) {
